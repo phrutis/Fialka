@@ -3,12 +3,11 @@
 - This is a modified version [LostCoins](https://github.com/phrutis/LostCoins/) 
 - Huge thanks [kanhavishva](https://github.com/kanhavishva) and to all developers whose codes were used in Fialka M-125.
 ## Quick start
-- Сonvert addresses 1... into binary hashes RIPEMD160 use [b58dec.exe](https://github.com/phrutis/Fialka/blob/main/Others/b58dec.exe) Run: ```b58dec.exe addresses.txt base160.bin```
+- Сonvert addresses 1... into binary hashes RIPEMD160 use [b58dec.exe](https://github.com/phrutis/Fialka/blob/main/Others/b58dec.exe) </br> Run: ```b58dec.exe addresses.txt base160.bin```
 - It is important to sort the base160.bin file otherwise the Bloom search filter will not work as expected.
-- To SORT base160.bin use the program [RMD160-Sort.exe](https://github.com/phrutis/Fialka/blob/main/Others/RMD160-Sort.exe) Run: ```RMD160-Sort.exe base160.bin hex160-Sort.bin``` 
+- To SORT base160.bin use the program [RMD160-Sort.exe](https://github.com/phrutis/Fialka/blob/main/Others/RMD160-Sort.exe)</br> Run: ```RMD160-Sort.exe base160.bin hex160-Sort.bin``` 
 # Parametrs:
 Run: ```Fialka.exe -h```
-
 ```
 Usage: Fialka M-125 [options...]
 Options:
