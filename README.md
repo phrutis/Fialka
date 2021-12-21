@@ -69,7 +69,7 @@ KyiR31LZTQ2hk1DRxEticnsQCA8tjFZcgJiKNaRArZME5fpfAjWj </br>
  - Run: ```Fialka.exe -t 1 -r 0 -s Minikeys-list.txt -z Passphrases -f test.bin```
 
 #### To search for Private keys WIF
- - For WIF **ONLY !** letters and symbols Base58 (ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz123456789)
+ - For WIF **ONLY !** letters Base58 (ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz123456789)
  - For WIF The first letter must be L... (length 52) and K... (length 52) or 5... (length 51) if 5.. WIF is listed use **-b**
  - Run: ```Fialka.exe -t 1 -r 0 -s Private-keys-wif.txt -z WIF -f test.bin```
 
@@ -92,10 +92,10 @@ KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qYwyWFyQr5iVJkTvXccg </br>
 KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qYzMHHGVeYFPidEza7Td </br>
 KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qZ3hA1yqkkqoyqype3pQ </br>
 **KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qZ4CZMY**vJden3dEAzBrN </br>
-- We know that the private key corresponds to 64 bits. Therefore, set the -m 64 range limiter.
+- We know that the private key corresponds to 64 bits. Therefore, set the -m 64 range bit limiter.
 - If the output private key is more or less than 64 bits, skip... 
 - For 256 bit range use -m 256 or other ranges skip...
-- -n ? number of random letters. If prefix 38 letters 52-38 = -n 14 (without сhecksum)
+- -n ? number of random letters. If prefix 38 letters 52-38 = -n 14
 - Run: ```Fialka.exe -t 6 -r 1 -f puzles.bin -s KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qZ4CZMY -n 12 -m 64```
 
 ![alt text](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r1.jpg "Fialka M-125")
@@ -144,7 +144,7 @@ Run: ```Fialka.exe -t 6 -r 7 -f test.bin```
 ![alt text](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r7.jpg "Fialka M-125")
 
 ## Mode 8
-### GPU Parallel WIF search with continuation
+### GPU Parallel WIF search
 Create a text file WIF.txt with 65536 WIF on a new line. </br>
 Run: ```Fialka.exe -t 0 -g -i 0 -x 256,256 -r 8 -f test.bin```
 
@@ -155,7 +155,7 @@ Example address [puzzle 64](https://privatekeys.pw/puzzles/bitcoin-puzzle-tx) **
 The longer the prefix found, the more accurate the WIF </br>
 You can specify the exact range for the WIF search. </br>
 Use start and finish options to randomize between them. </br>
-The output creates 2 next files Found.txt and NEW-WIF.txt (only WIF sorted)</br>
+The output creates 2 files: Found.txt and NEW-WIF.txt (only WIF sorted)</br>
 
 Search WIF from prefix **16jY7qLJn**</br>
 Run: ```VanitySearch.exe -t 0 -gpu -g 256,256 -r 25000 -start 8000000000000000 -finish ffffffffffffffff -o Found.txt 16jY7qLJn```</br></br>
