@@ -1,5 +1,5 @@
 # Fialka [M-125](https://en.wikipedia.org/wiki/Fialka)
-## GPU & CPU Brute-force BitCoin Private keys WIF, Minikeys, Passphrases....
+## GPU & CPU Brute-force BitCoin private keys, WIF, minikeys and passphrases.
 ![alt text](https://raw.githubusercontent.com/phrutis/LostCoins/main/Others/4.jpg "Fialka M-125")
 - This is a modified version of [LostCoins](https://github.com/phrutis/LostCoins/) 
 - Huge thanks to [kanhavishva](https://github.com/kanhavishva) and to all developers whose codes were used in Fialka M-125.
