@@ -159,11 +159,11 @@ Use start and finish options to randomize between them. </br>
 The output creates 2 files: Found.txt and NEW-WIF.txt (only WIF is sorted)</br>
 
 Search for WIF from prefix **16jY7qLJn**</br>
-Run: ```VanitySearch.exe -t 0 -gpu -g 256,256 -r 25000 -start 8000000000000000 -finish ffffffffffffffff -o Found.txt 16jY7qLJn```</br></br>
+Run: ```VanitySearch.exe -t 0 -gpu -g 256,256 -r 25000 -bit 64 -start 8000000000000000 -finish ffffffffffffffff -o Found.txt 16jY7qLJn```</br></br>
 Search for WIF from prefix **16jY7qLJnx**</br>
-Run: ```VanitySearch.exe -t 0 -gpu -g 256,256 -r 25000 -start 8000000000000000 -finish ffffffffffffffff -o Found.txt 16jY7qLJnx```</br></br>
+Run: ```VanitySearch.exe -t 0 -gpu -g 256,256 -r 25000 -bit 64 -start 8000000000000000 -finish ffffffffffffffff -o Found.txt 16jY7qLJnx```</br></br>
 Search for WIF from prefix **16jY7qLJnxb**</br>
-Run: ```VanitySearch.exe -t 0 -gpu -g 256,256 -r 25000 -start 8000000000000000 -finish 9000000000000000 -o Found.txt 16jY7qLJnxb```
+Run: ```VanitySearch.exe -t 0 -gpu -g 256,256 -r 25000 -bit 64 -start 8000000000000000 -finish 9000000000000000 -o Found.txt 16jY7qLJnxb```
 
 ![Mode 8 example](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/vanitysearch.jpg "Fialka M-125")
 
