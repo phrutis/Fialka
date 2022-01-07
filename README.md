@@ -132,7 +132,7 @@ Run: ```Fialka.exe -t 6 -r 8 -m address --coin BTC 1H1RGrudsWoJtKAbshbHYtBWP7WYB
 
 ## Mode 9
 ### GPU Parallel WIF search
-The mode is under testing, to search for WIFs on the GPU, use the previous version of Fialka!!! 
+The mode is under testing, to search for WIFs on the GPU, use the previous version of Fialka!!! </br>
 Create a text file WIF.txt with 65536 WIF on a new line. </br>
 Run: ```Fialka.exe -t 0 -g --gpui 0 --gpux 256,256 -r 9 -m addresses --coin BTC -i test.bin```
 
