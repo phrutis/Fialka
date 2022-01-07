@@ -4,7 +4,7 @@
 - This is a modified version of [Rotor-Cuda](https://github.com/phrutis/Rotor-Cuda) 
 - Huge thanks to [kanhavishva](https://github.com/kanhavishva) and to all developers whose codes were used in Fialka M-125.
 ## Quick start
-- [**How to create databases**](https://github.com/phrutis/Rotor-Cuda/tree/main/Others)
+- [**How to create databases**](https://github.com/phrutis/Fialka/tree/main/Others)
 ## Parametrs:
 - -t ? amount of CPU cores (threads) to use?
 - -r ? search mode number
