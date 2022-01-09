@@ -89,9 +89,9 @@ KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qZ3hA1yqkkqoyqype3pQ </br>
 ## Mode 3
 ### Parallel search for WIF with continuation
 #### **[How to use mode 3 + examples](https://github.com/phrutis/Fialka/blob/main/Others/img/r3.md)**
-Run: ```Fialka.exe -t 6 -r 3 -m addresses --coin BTC -i test.bin -d 64 -n 45``` 
+Run: ```Fialka.exe -t 6 -r 3 -d 64 -n 45 -m address --coin BTC 16jY7q2ZeFPaadZvdygopRURcXhwBWKsA4``` 
 
-![alt text](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r3.jpg "Fialka M-125")
+![alt text](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r3.png "Fialka M-125")
 
 ## Mode 4
 ### Parallel search for passphrases with continuation + filter
