@@ -1,4 +1,4 @@
-git clone https://github.com/phrutis/Fialka/
-cd Fialka/linux
-make clean
-make all
+git clone https://github.com/phrutis/Fialka/</br>
+cd Fialka/linux</br>
+make clean</br>
+make all</br>
