@@ -1,5 +1,5 @@
 # Fialka [M-125](https://en.wikipedia.org/wiki/Fialka)
-## GPU & CPU Brute-force BitCoin private keys, WIF, minikeys and passphrases.
+## Brute-force BitCoin private keys, WIF, minikeys and passphrases.
 ![alt text](https://raw.githubusercontent.com/phrutis/LostCoins/main/Others/4.jpg "Fialka M-125")
 - This is a modified version of [Rotor-Cuda](https://github.com/phrutis/Rotor-Cuda) 
 - Huge thanks to [kanhavishva](https://github.com/kanhavishva) and to all developers whose codes were used in Fialka M-125.
@@ -88,28 +88,28 @@ KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qZ3hA1yqkkqoyqype3pQ </br>
 
 ## Mode 3
 ### Parallel search for WIF with continuation
-#### **[How to use mode 2 + examples](https://github.com/phrutis/Fialka/blob/main/Others/img/r2.md)**
+#### **[How to use mode 3 + examples](https://github.com/phrutis/Fialka/blob/main/Others/img/r3.md)**
 Run: ```Fialka.exe -t 6 -r 3 -m addresses --coin BTC -i test.bin -d 64 -n 45``` 
 
 ![alt text](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r3.jpg "Fialka M-125")
 
 ## Mode 4
 ### Parallel search for passphrases with continuation + filter
-#### **[How to use mode 3 + examples](https://github.com/phrutis/Fialka/blob/main/Others/img/r3.md)**
+#### **[How to use mode 4 + examples](https://github.com/phrutis/Fialka/blob/main/Others/img/r4.md)**
 Run: ```Fialka.exe -t 6 -r 4 -m addresses --coin BTC -i test.bin -n 60```</br> 
 Run: ```Fialka.exe -t 6 -r 4 -n 60 -m address --coin BTC 14Nmb7rFFLdZhKaud5h7nDSLFQfma7JCz2```</br> 
 ![alt text](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r4.jpg "Fialka M-125")
 
 ## Mode 5
 ### Parallel search for passphrases with continuation + filter
-#### **[How to use mode 4 + examples](https://github.com/phrutis/Fialka/blob/main/Others/img/r4.md)**
+#### **[How to use mode 5 + examples](https://github.com/phrutis/Fialka/blob/main/Others/img/r5.md)**
 Run: ```Fialka.exe -t 6 -r 5 -n 60 -m addresses --coin BTC -i test.bin```</br>
 Run: ```Fialka.exe -t 6 -r 5 -n 60 -m address --coin BTC 14Nmb7rFFLdZhKaud5h7nDSLFQfma7JCz2```</br>
 ![alt text](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r5.jpg "Fialka M-125")
 
 ## Mode 6
 ### Parallel search for passphrases with continuation + Filter
-#### **[How to use mode 5 + examples](https://github.com/phrutis/Fialka/blob/main/Others/img/r6.md)**
+#### **[How to use mode 6 + examples](https://github.com/phrutis/Fialka/blob/main/Others/img/r6.md)**
 Run: ```Fialka.exe -t 6 -r 6 -n 60 -m addresses --coin BTC -i test.bin```</br>
 Run: ```Fialka.exe -t 6 -r 6 -n 60 -m address --coin BTC 15KqNGHFEViRS4WTYYJ4TRoDtSXH5ESzW9```</br> 
 
@@ -117,7 +117,7 @@ Run: ```Fialka.exe -t 6 -r 6 -n 60 -m address --coin BTC 15KqNGHFEViRS4WTYYJ4TRo
 
 ## Mode 7
 ### Parallel search for WIF with continuation (without range limiter -d)
-#### Similar [settings as in mode 2](https://github.com/phrutis/Fialka/blob/main/Others/img/r2.md) without range limiter -d
+#### Similar [settings as in mode 3](https://github.com/phrutis/Fialka/blob/main/Others/img/r3.md) without range limiter -d
 Run: ```Fialka.exe -t 6 -r 7 -n 39 -m addresses --coin BTC -i test.bin``` 
 
 ![alt text](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r7.jpg "Fialka M-125")
