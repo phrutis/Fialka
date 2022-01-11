@@ -168,13 +168,13 @@ Run: ```Fialka.exe -t 6 -r 11 -m addresses --coin BTC -i test.bin```
 
 ## Mode 12
 ### Random search for minikeys 22, 30 S...
-- -s ? the first part of the key S.....
-- n ? how many letters to randomize? 
-- -z second part of the key (you can do without it) 
-- Use the -u or -b parameter to find minikeys 
+- -s ? the first part of the key S.....</br>
+- -n ? how many letters to randomize? </br>
+- -z second part of the key (you can do without it) </br>
+- Use the -u or -b parameter to find minikeys </br>
 Run: ```Fialka.exe -t 6 -r 12 -s SHwfehdFcL -n 3 -z 2ieZEtK -m address --coin BTC 1GWPWQNWdnYQYuo4DPzEhFCKhKq8dxGYSG```
 
-![Mode 11 example](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r12.png "Fialka M-125")
+![Mode 12 example](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r12.png "Fialka M-125")
 
 # VanitySearch special edition for Fialka M-125
 Example address [puzzle 64](https://privatekeys.pw/puzzles/bitcoin-puzzle-tx) **16jY7qLJnxb7CHZyqBP8qca9d51gAjyXQN** </br>
