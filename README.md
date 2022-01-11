@@ -4,16 +4,20 @@
 - This is a modified version of [Rotor-Cuda](https://github.com/phrutis/Rotor-Cuda) 
 - Huge thanks to [kanhavishva](https://github.com/kanhavishva) and to all developers whose codes were used in Fialka M-125.
 ## Quick start
-- [**How to create databases**](https://github.com/phrutis/Fialka/tree/main/Others)
+- [**How to create base addresses hex160Sort.bin**](https://github.com/phrutis/Fialka/tree/main/Others)
 ## Parametrs:
 - -t ? amount of CPU cores (threads) to use?
 - -r ? search mode number
+- In any mode, you can use one of the options below:
 - Bitcoin Single Addres use: ```-m address --coin BTC 1PWCx5fovoEaoBowAvF5k91m2Xat9bMgwb```
 - Bitcoin Multi Address use: ```-m addresses --coin BTC -i test.bin```
 - ETHEREUM Single Addres use: ```-m address --coin eth 0xfda5c442e76a95f96c09782f1a15d3b58e32404f```
 - ETHEREUM Multi Address use: ```-m addresses --coin eth -i base160_eth_sorted.bin```
 - Public key Single X Point use: ```-m xpoint --coin BTC a2efa402fd5268400c77c20e574ba86409ededee7c4020e4b9f0edbee53de0d4```
 - Public keys Multi X Points use: ```-m xpoints --coin BTC -i Pubkeys0.1up.bin```
+- Example Single Addres use: ```Fialka.exe -t 6 -r 2 -s KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qYzMHHGVe -n 11 -d 64 -m address --coin BTC 16jY7qd27Snurgjj5rumgHYBEuTSARVSf6``` 
+- Example Single X Point use: ```Fialka.exe -t 6 -r 2 -s KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qYzMHHGVe -n 11 -d 64 -m xpoint --coin BTC 0395117e661ffa37fd3ca5d7b50127e645b05ad633936d72fc7855f60ba2c874e44```
+- Example Multi Address use: ```Fialka.exe -t 6 -r 2 -s KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qYzMHHGVe -n 11 -d 64 -m addresses --coin BTC -i hex160Sort.bin```
 - [Use old databases or a generator to create list of passphrases, minikeys, WIF, HEX](https://github.com/phrutis/LostCoins/blob/main/Others/Modes.md) 
 - The list of found passphrases is [here](https://privatekeys.pw/brainwallet/bitcoin/1) and [here](https://allprivatekeys.com/hacked-brainwallets-with-balance)
 - There is a premade file [test.bin](https://github.com/phrutis/Fialka/blob/main/Others/test.bin) 8 words of 3 letters can be found inside
