@@ -16,7 +16,7 @@
 - Public key Single X Point use: ```-m xpoint --coin BTC a2efa402fd5268400c77c20e574ba86409ededee7c4020e4b9f0edbee53de0d4```
 - Public keys Multi X Points use: ```-m xpoints --coin BTC -i Pubkeys0.1up.bin```
 - Example Single Addres use: ```Fialka.exe -t 6 -r 2 -s KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qYzMHHGVe -n 11 -d 64 -m address --coin BTC 16jY7qd27Snurgjj5rumgHYBEuTSARVSf6``` 
-- Example Single X Point use: ```Fialka.exe -t 6 -r 2 -s KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qYzMHHGVe -n 11 -d 64 -m xpoint --coin BTC 0395117e661ffa37fd3ca5d7b50127e645b05ad633936d72fc7855f60ba2c874e44```
+- Example Single X Point use: ```Fialka.exe -t 6 -r 2 -s KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qYzMHHGVe -n 11 -d 64 -m xpoint --coin BTC cd6d186d8946f6baa4eca4bcd63deda1b0afe62939811f7ec202dc0007df16e0```
 - Example Multi Address use: ```Fialka.exe -t 6 -r 2 -s KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qYzMHHGVe -n 11 -d 64 -m addresses --coin BTC -i hex160Sort.bin```
 - [Use old databases or a generator to create list of passphrases, minikeys, WIF, HEX](https://github.com/phrutis/LostCoins/blob/main/Others/Modes.md) 
 - The list of found passphrases is [here](https://privatekeys.pw/brainwallet/bitcoin/1) and [here](https://allprivatekeys.com/hacked-brainwallets-with-balance)
