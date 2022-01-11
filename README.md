@@ -50,9 +50,20 @@ KyiR31LZTQ2hk1DRxEticnsQCA8tjFZcgJiKNaRArZME5fpfAjWj </br>
 
 ![alt text](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r1p.jpg "Fialka M-125")
 
+#### To search for BIP39 words
+- For manual exact search of BIP39 word combinations
+- Runs slowly on only one core! Use -t 1 If you need faster, use copies of the Fialka M-125 program with different text files
+- Use a generator to generate BIP39 word combinations. Example: ```Generator.exe --dictlist "in.txt,in2.txt" --rule "$0[_]?$1" -s " " out.txt```
+- Run: ```Fialka.exe -t 1 -r 1 -m address --coin BTC -s bips-list.txt -z BIP -n 5 1ASs2iVA1CCXoMGD98TDsdsoiFDDAbaqbd```
+
+![alt text](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r1bip.png "Fialka M-125")
+
 #### To search for [minikeys](https://en.bitcoin.it/wiki/Mini_private_key_format)
  - For minikeys S... (length 22) or S... (length 30)
- - Run: ```Fialka.exe -t 6 -r 1 -m addresses --coin BTC -s dictionary-minikeys.txt -z Passphrases -i test.bin```
+ - Use the -u or -b parameter to find minikeys 
+ - Run: ```Fialka.exe -t 6 -r 1 -m address --coin BTC -s dictionary-minikeys.txt -z Passphrases 14VkDDuvFXs8sMhqznWzioMXKbPAuLofeb```
+ 
+ ![alt text](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r1mini.png "Fialka M-125")
 
 #### To search for private keys WIF
  - For WIF **ONLY!** letters Base58 (ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz123456789)
@@ -96,6 +107,7 @@ Run: ```Fialka.exe -t 6 -r 3 -d 64 -n 45 -m address --coin BTC 16jY7q2ZeFPaadZvd
 ## Mode 4
 ### Parallel search for passphrases with continuation + filter
 #### **[How to use mode 4 + examples](https://github.com/phrutis/Fialka/blob/main/Others/img/r4.md)**
+- Use the -u or -b parameter to find old passphrases 
 Run: ```Fialka.exe -t 6 -r 4 -m addresses --coin BTC -i test.bin -n 60```</br> 
 Run: ```Fialka.exe -t 6 -r 4 -n 60 -m address --coin BTC 14Nmb7rFFLdZhKaud5h7nDSLFQfma7JCz2```</br> 
 ![alt text](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r4.jpg "Fialka M-125")
@@ -103,6 +115,7 @@ Run: ```Fialka.exe -t 6 -r 4 -n 60 -m address --coin BTC 14Nmb7rFFLdZhKaud5h7nDS
 ## Mode 5
 ### Parallel search for passphrases with continuation + filter
 #### **[How to use mode 5 + examples](https://github.com/phrutis/Fialka/blob/main/Others/img/r5.md)**
+- Use the -u or -b parameter to find old passphrases
 Run: ```Fialka.exe -t 6 -r 5 -n 60 -m addresses --coin BTC -i test.bin```</br>
 Run: ```Fialka.exe -t 6 -r 5 -n 60 -m address --coin BTC 14Nmb7rFFLdZhKaud5h7nDSLFQfma7JCz2```</br>
 ![alt text](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r5.jpg "Fialka M-125")
@@ -110,6 +123,7 @@ Run: ```Fialka.exe -t 6 -r 5 -n 60 -m address --coin BTC 14Nmb7rFFLdZhKaud5h7nDS
 ## Mode 6
 ### Parallel search for passphrases with continuation + Filter
 #### **[How to use mode 6 + examples](https://github.com/phrutis/Fialka/blob/main/Others/img/r6.md)**
+- Use the -u or -b parameter to find old passphrases
 Run: ```Fialka.exe -t 6 -r 6 -n 60 -m addresses --coin BTC -i test.bin```</br>
 Run: ```Fialka.exe -t 6 -r 6 -n 60 -m address --coin BTC 15KqNGHFEViRS4WTYYJ4TRoDtSXH5ESzW9```</br> 
 
@@ -126,6 +140,7 @@ Run: ```Fialka.exe -t 6 -r 3 -d 64 -n 45 -m address --coin BTC 16jY7q2ZeFPaadZvd
 ### Parallel search for minikeys S.. with continuation
 Create file Minikeys.txt 
 Add Minikeys S... (22) or S.. (30) on a new line. One line = 1 thread (-t 1) max -t 64</br> 
+- Use the -u or -b parameter to find minikeys 
 Run: ```Fialka.exe -t 6 -r 8 -m address --coin BTC 1H1RGrudsWoJtKAbshbHYtBWP7WYBFTUYb```
 
 ![alt text](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r8.jpg "Fialka M-125")
@@ -134,19 +149,32 @@ Run: ```Fialka.exe -t 6 -r 8 -m address --coin BTC 1H1RGrudsWoJtKAbshbHYtBWP7WYB
 ### GPU Parallel WIF search
 The mode is under testing, to search for WIFs on the GPU, use the previous version of Fialka!!! </br>
 Create a text file WIF.txt with 65536 WIF on a new line. </br>
-Run: ```Fialka.exe -t 0 -g --gpui 0 --gpux 256,256 -r 9 -m addresses --coin BTC -i test.bin```
+The GPU is under development! Use the mode in the old version of the [Fialka v1.0](https://github.com/phrutis/Fialka/releases/tag/v1.0)
+Run: ```Fialka.exe -t 0 -g -i 0 -x 256,256 -r 8 -f test.bin```
 
 ![Mode 9 example](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r9.jpg "Fialka M-125")
 
 ## Mode 10
 ### Random search for minikeys 22 S...
+- Use the -u or -b parameter to find minikeys 
 Run: ```Fialka.exe -t 6 -r 10 -m addresses --coin BTC -i test.bin```
 ![Mode 10 example](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r10.jpg "Fialka M-125")
 
 ## Mode 11
 ### Random search for minikeys 30 S...
+- Use the -u or -b parameter to find minikeys 
 Run: ```Fialka.exe -t 6 -r 11 -m addresses --coin BTC -i test.bin```
 ![Mode 11 example](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r11.jpg "Fialka M-125")
+
+## Mode 12
+### Random search for minikeys 22, 30 S...
+- -s ? the first part of the key S.....
+- n ? how many letters to randomize? 
+- -z second part of the key (you can do without it) 
+- Use the -u or -b parameter to find minikeys 
+Run: ```Fialka.exe -t 6 -r 12 -s SHwfehdFcL -n 3 -z 2ieZEtK -m address --coin BTC 1GWPWQNWdnYQYuo4DPzEhFCKhKq8dxGYSG```
+
+![Mode 11 example](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r12.png "Fialka M-125")
 
 # VanitySearch special edition for Fialka M-125
 Example address [puzzle 64](https://privatekeys.pw/puzzles/bitcoin-puzzle-tx) **16jY7qLJnxb7CHZyqBP8qca9d51gAjyXQN** </br>
