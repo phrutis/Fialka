@@ -88,14 +88,14 @@ KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qYwYTCAfXHKuFsZ2stFG </br>
 KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qYwyWFyQr5iVJkTvXccg </br>
 KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qYzMHHGVeYFPidEza7Td </br>
 KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qZ3hA1yqkkqoyqype3pQ </br>
-**KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qZ4CZMY**vJden3dEAzBrN </br>
+**KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qYzMHHGVe**YFPidEza7Td </br>
 - We know that the private key corresponds to 64 bits. Therefore, set the -d 64 range bit limiter.
 - If the output private key is more or less than 64 bits, skip... 
 - For 256 bit range use -d 256 or other ranges skip...
-- -n ? amount of random letters. If prefix 38 letters 52-38 = -n 14
-- Run: ```Fialka.exe -t 6 -r 2 -m addresses --coin BTC -i test.bin -s KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qZ4CZM -n 14 -d 64```
+- -n ? amount of random letters. If prefix 41 letters 52-41 = -n 11
+- Run: ```Fialka.exe -t 6 -r 2 -s KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qYzMHHGVe -n 11 -d 64 -m address --coin BTC 16jY7qd27Snurgjj5rumgHYBEuTSARVSf6```
 
-![alt text](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r2.jpg "Fialka M-125")
+![alt text](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r2.png "Fialka M-125")
 
 ## Mode 3
 ### Parallel search for WIF with continuation
