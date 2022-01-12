@@ -160,13 +160,13 @@ Run: ```Fialka.exe -t 0 -g -i 0 -x 256,256 -r 8 -f test.bin```
 
 ## Mode 10
 ### Random search for minikeys 22 S...
-- Use the -u or -b parameter to find minikeys 
+- Use the -u or -b parameter to find minikeys </br>
 Run: ```Fialka.exe -t 6 -r 10 -m addresses --coin BTC -i test.bin```
 ![Mode 10 example](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r10.jpg "Fialka M-125")
 
 ## Mode 11
 ### Random search for minikeys 30 S...
-- Use the -u or -b parameter to find minikeys 
+- Use the -u or -b parameter to find minikeys </br>
 Run: ```Fialka.exe -t 6 -r 11 -m addresses --coin BTC -i test.bin```
 ![Mode 11 example](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r11.jpg "Fialka M-125")
 
