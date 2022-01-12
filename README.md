@@ -55,9 +55,10 @@ KyiR31LZTQ2hk1DRxEticnsQCA8tjFZcgJiKNaRArZME5fpfAjWj </br>
 ![alt text](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r1p.jpg "Fialka M-125")
 
 #### To search for BIP39 words
-- For manual exact search of BIP39 word combinations
-- Runs slowly on only one core! Use -t 1 If you need faster, use copies of the Fialka M-125 program with different text files
-- Use a generator to generate BIP39 word combinations. Example: ```Generator.exe --dictlist "in.txt,in2.txt" --rule "$0[_]?$1" -s " " out.txt```
+- For manual exact search of BIP39 word combinations 
+- Runs slowly on only one core! Use -t 1 If you need faster, use copies of the Fialka M-125 program with different text files</br> 
+- Use a generator to generate BIP39 word combinations. 
+- Example: ```Generator.exe --dictlist "in.txt,in2.txt" --rule "$0[_]?$1" -s " " out.txt```
 - Run: ```Fialka.exe -t 1 -r 1 -m address --coin BTC -s bips-list.txt -z BIP -n 5 1ASs2iVA1CCXoMGD98TDsdsoiFDDAbaqbd```
 
 ![alt text](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r1bip.png "Fialka M-125")
@@ -111,23 +112,25 @@ Run: ```Fialka.exe -t 6 -r 3 -d 64 -n 45 -m address --coin BTC 16jY7q2ZeFPaadZvd
 ## Mode 4
 ### Parallel search for passphrases with continuation + filter
 #### **[How to use mode 4 + examples](https://github.com/phrutis/Fialka/blob/main/Others/img/r4.md)**
-- Use the -u or -b parameter to find old passphrases 
+- Use the -u or -b parameter to find old passphrases </br> 
 Run: ```Fialka.exe -t 6 -r 4 -m addresses --coin BTC -i test.bin -n 60```</br> 
 Run: ```Fialka.exe -t 6 -r 4 -n 60 -m address --coin BTC 14Nmb7rFFLdZhKaud5h7nDSLFQfma7JCz2```</br> 
+
 ![alt text](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r4.jpg "Fialka M-125")
 
 ## Mode 5
 ### Parallel search for passphrases with continuation + filter
 #### **[How to use mode 5 + examples](https://github.com/phrutis/Fialka/blob/main/Others/img/r5.md)**
-- Use the -u or -b parameter to find old passphrases
+- Use the -u or -b parameter to find old passphrases </br> 
 Run: ```Fialka.exe -t 6 -r 5 -n 60 -m addresses --coin BTC -i test.bin```</br>
 Run: ```Fialka.exe -t 6 -r 5 -n 60 -m address --coin BTC 14Nmb7rFFLdZhKaud5h7nDSLFQfma7JCz2```</br>
+
 ![alt text](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r5.jpg "Fialka M-125")
 
 ## Mode 6
 ### Parallel search for passphrases with continuation + Filter
 #### **[How to use mode 6 + examples](https://github.com/phrutis/Fialka/blob/main/Others/img/r6.md)**
-- Use the -u or -b parameter to find old passphrases
+- Use the -u or -b parameter to find old passphrases </br> 
 Run: ```Fialka.exe -t 6 -r 6 -n 60 -m addresses --coin BTC -i test.bin```</br>
 Run: ```Fialka.exe -t 6 -r 6 -n 60 -m address --coin BTC 15KqNGHFEViRS4WTYYJ4TRoDtSXH5ESzW9```</br> 
 
@@ -162,12 +165,14 @@ Run: ```Fialka.exe -t 0 -g -i 0 -x 256,256 -r 8 -f test.bin```
 ### Random search for minikeys 22 S...
 - Use the -u or -b parameter to find minikeys </br>
 Run: ```Fialka.exe -t 6 -r 10 -m addresses --coin BTC -i test.bin```
+
 ![Mode 10 example](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r10.jpg "Fialka M-125")
 
 ## Mode 11
 ### Random search for minikeys 30 S...
 - Use the -u or -b parameter to find minikeys </br>
 Run: ```Fialka.exe -t 6 -r 11 -m addresses --coin BTC -i test.bin```
+
 ![Mode 11 example](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r11.jpg "Fialka M-125")
 
 ## Mode 12
