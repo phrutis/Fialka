@@ -205,7 +205,7 @@ Run: ```VanitySearch.exe -t 0 -gpu -g 256,256 -r 25000 -bit 64 -start 8000000000
 Search for WIF from prefix **16jY7qLJnxb**</br>
 Run: ```VanitySearch.exe -t 0 -gpu -g 256,256 -r 25000 -bit 64 -start 8000000000000000 -finish 9000000000000000 -o Found.txt 16jY7qLJnxb```
 
-![Mode 8 example](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/vanitysearch.jpg "Fialka M-125")
+![Mode 8 example](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/vanitysearch.png "Fialka M-125")
 
 ## Building
 - Microsoft Visual Studio Community 2019
