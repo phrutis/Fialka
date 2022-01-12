@@ -147,13 +147,13 @@ Add Minikeys S... (22) or S.. (30) on a new line. One line = 1 thread (-t 1) max
 - Use the -u or -b parameter to find minikeys 
 Run: ```Fialka.exe -t 6 -r 8 -m address --coin BTC 1H1RGrudsWoJtKAbshbHYtBWP7WYBFTUYb```
 
-![alt text](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r8.jpg "Fialka M-125")
+![alt text](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r8.png "Fialka M-125")
 
 ## Mode 9
 ### GPU Parallel WIF search
 The mode is under testing, to search for WIFs on the GPU, use the previous version of Fialka!!! </br>
-Create a text file WIF.txt with 65536 WIF on a new line. </br>
-The GPU is under development! Use the mode in the old version of the [Fialka v1.0](https://github.com/phrutis/Fialka/releases/tag/v1.0)
+Create a text file WIF.txt with 65536 WIF on a new line. 
+The GPU is under development! Use the mode in the old version of the [Fialka v1.0](https://github.com/phrutis/Fialka/releases/tag/v1.0)</br>
 Run: ```Fialka.exe -t 0 -g -i 0 -x 256,256 -r 8 -f test.bin```
 
 ![Mode 9 example](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r9.jpg "Fialka M-125")
@@ -179,6 +179,17 @@ Run: ```Fialka.exe -t 6 -r 11 -m addresses --coin BTC -i test.bin```
 Run: ```Fialka.exe -t 6 -r 12 -s SHwfehdFcL -n 3 -z 2ieZEtK -m address --coin BTC 1GWPWQNWdnYQYuo4DPzEhFCKhKq8dxGYSG```
 
 ![Mode 12 example](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r12.png "Fialka M-125")
+
+## Mode 13 (best performance)
+### Random search for minikeys 22, 30 S... (Analog mode 12)
+- Checking minikays for validity "V" (? = 0x00...) If the mini-key is not valid then skip...
+- -s ? the first part of the key S.....</br>
+- -n ? how many letters to randomize? </br>
+- -z second part of the key (you can do without it) </br>
+- Use the -u or -b parameter to find minikeys </br>
+Run: ```Fialka.exe -t 1 -r 13 -s SYXqbKXyX -n 4 -z 3cSMV7Csa -m address --coin BTC 1KM1Wq1boMka4M4vavQX5Zyc281G8SbuCQ```
+
+![Mode 13 example](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r13.png "Fialka M-125")
 
 # VanitySearch special edition for Fialka M-125
 Example address [puzzle 64](https://privatekeys.pw/puzzles/bitcoin-puzzle-tx) **16jY7qLJnxb7CHZyqBP8qca9d51gAjyXQN** </br>
