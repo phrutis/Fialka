@@ -144,8 +144,9 @@ Run: ```Fialka.exe -t 6 -r 3 -d 64 -n 45 -m address --coin BTC 16jY7q2ZeFPaadZvd
 ### Parallel search for minikeys S.. with continuation
 Create file Minikeys.txt 
 Add Minikeys S... (22) or S.. (30) on a new line. One line = 1 thread (-t 1) max -t 64</br> 
-- Use the -u or -b parameter to find minikeys 
-Run: ```Fialka.exe -t 6 -r 8 -m address --coin BTC 1H1RGrudsWoJtKAbshbHYtBWP7WYBFTUYb```
+- Use the -u or -b parameter to find minikeys </br>
+- Minikeys.txt SYXqbKXyXaKF23cSMV1AAA -> SYXqbKXyXaKF23cSMV7Csa found</br>
+Run: ```Fialka.exe -t 6 -r 8 -m address --coin BTC 1KM1Wq1boMka4M4vavQX5Zyc281G8SbuCQ```
 
 ![alt text](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r8.png "Fialka M-125")
 
