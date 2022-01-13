@@ -64,9 +64,8 @@ KyiR31LZTQ2hk1DRxEticnsQCA8tjFZcgJiKNaRArZME5fpfAjWj </br>
 ![alt text](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r1bip.png "Fialka M-125")
 
 #### To search for [minikeys](https://en.bitcoin.it/wiki/Mini_private_key_format)
- - For minikeys S... (length 22) or S... (length 30)
- - Use the -u or -b parameter to find minikeys 
- - Run: ```Fialka.exe -t 6 -r 1 -m address --coin BTC -s dictionary-minikeys.txt -z Passphrases 14VkDDuvFXs8sMhqznWzioMXKbPAuLofeb```
+ - For minikeys S... (length 22) use -u parameter or S... (length 30) use -b parameter
+ - Run: ```Fialka.exe -b -t 6 -r 1 -m address --coin BTC -s dictionary-minikeys.txt -z Passphrases 14VkDDuvFXs8sMhqznWzioMXKbPAuLofeb```
  
  ![alt text](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r1mini.png "Fialka M-125")
 
@@ -147,7 +146,7 @@ Run: ```Fialka.exe -t 6 -r 3 -d 64 -n 45 -m address --coin BTC 16jY7q2ZeFPaadZvd
 ### Parallel search for minikeys S.. with continuation
 Create file Minikeys.txt 
 Add Minikeys S... (22) or S.. (30) on a new line. One line = 1 thread (-t 1) max -t 64</br> 
-- Use the -u or -b parameter to find minikeys </br>
+- For minikeys S... (length 22) use -u parameter or S... (length 30) use -b parameter </br>
 Run: ```Fialka.exe -t 6 -r 8 -m address --coin BTC 1KM1Wq1boMka4M4vavQX5Zyc281G8SbuCQ```
 
 ![alt text](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r8.png "Fialka M-125")
@@ -163,15 +162,13 @@ Run: ```Fialka.exe -t 0 -g -i 0 -x 256,256 -r 8 -f test.bin```
 
 ## Mode 10
 ### Random search for minikeys 22 S...
-- Use the -u or -b parameter to find minikeys </br>
-Run: ```Fialka.exe -t 6 -r 10 -m addresses --coin BTC -i test.bin```
+Run: ```Fialka.exe -u -t 6 -r 10 -m addresses --coin BTC -i test.bin```
 
 ![Mode 10 example](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r10.jpg "Fialka M-125")
 
 ## Mode 11
 ### Random search for minikeys 30 S...
-- Use the -u or -b parameter to find minikeys </br>
-Run: ```Fialka.exe -t 6 -r 11 -m addresses --coin BTC -i test.bin```
+Run: ```Fialka.exe -b -t 6 -r 11 -m addresses --coin BTC -i test.bin```
 
 ![Mode 11 example](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r11.jpg "Fialka M-125")
 
@@ -180,8 +177,8 @@ Run: ```Fialka.exe -t 6 -r 11 -m addresses --coin BTC -i test.bin```
 - -s ? the first part of the key S.....</br>
 - -n ? how many letters to randomize? </br>
 - -z second part of the key (you can do without it) </br>
-- Use the -u or -b parameter to find minikeys </br>
-Run: ```Fialka.exe -t 6 -r 12 -s SHwfehdFcL -n 3 -z 2ieZEtK -m address --coin BTC 1GWPWQNWdnYQYuo4DPzEhFCKhKq8dxGYSG```
+- For minikeys S... (length 22) use -u parameter or S... (length 30) use -b parameter</br>
+Run: ```Fialka.exe -u -t 6 -r 12 -s SHwfehdFcL -n 3 -z 2ieZEtK -m address --coin BTC 1GWPWQNWdnYQYuo4DPzEhFCKhKq8dxGYSG```
 
 ![Mode 12 example](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r12.png "Fialka M-125")
 
@@ -191,8 +188,8 @@ Run: ```Fialka.exe -t 6 -r 12 -s SHwfehdFcL -n 3 -z 2ieZEtK -m address --coin BT
 - -s ? the first part of the key S.....</br>
 - -n ? how many letters to randomize? </br>
 - -z second part of the key (you can do without it) </br>
-- Use the -u or -b parameter to find minikeys </br>
-Run: ```Fialka.exe -t 1 -r 13 -s SYXqbKXyX -n 4 -z 3cSMV7Csa -m address --coin BTC 1KM1Wq1boMka4M4vavQX5Zyc281G8SbuCQ```
+- For minikeys S... (length 22) use -u parameter or S... (length 30) use -b parameter</br>
+Run: ```Fialka.exe -u -t 1 -r 13 -s SYXqbKXyX -n 4 -z 3cSMV7Csa -m address --coin BTC 1KM1Wq1boMka4M4vavQX5Zyc281G8SbuCQ```
 
 ![Mode 13 example](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r13.png "Fialka M-125")
 
