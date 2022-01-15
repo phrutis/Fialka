@@ -138,7 +138,7 @@ Run: ```Fialka.exe -t 6 -r 6 -n 60 -m address --coin BTC 15KqNGHFEViRS4WTYYJ4TRo
 ## Mode 7
 ### Parallel search for WIF with continuation (without range limiter -d)
 #### Similar [settings as in mode 3](https://github.com/phrutis/Fialka/blob/main/Others/img/r3.md) without range limiter -d
-Run: ```Fialka.exe -t 6 -r 3 -d 64 -n 45 -m address --coin BTC 16jY7q2ZeFPaadZvdygopRURcXhwBWKsA4``` 
+Run: ```Fialka.exe -t 6 -r 7 -d 64 -n 45 -m address --coin BTC 16jY7q2ZeFPaadZvdygopRURcXhwBWKsA4``` 
 
 ![alt text](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r7.png "Fialka M-125")
 
