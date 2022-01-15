@@ -26,15 +26,15 @@
 - [Make your own](https://brainwalletx.github.io/) passphrase or minikeys for test
 - There is a premade file [test.bin](https://github.com/phrutis/Fialka/blob/main/Others/test.bin) 8 WIF can be found inside: 
 - 4 WIF uncomressed: </br>
-5JiznUZskJpwodP3SR85vx5JKeopA3QpTK63BuziW8RmGGyJg81 </br>
-5KMdQbcUFS3PBbC6VgitFrFuaca3gBY4BJt4jpQ2YTNdPZ1CbuE </br>
-5HwfeuhdFscL9YTQCLT2952dieZEtKbzJ328b4CR1v6YUVLu2D7 </br>
-5J9J63iW7s5p54T569qstediqNgBTLXpUmxUtQwsXTaHz3JCsKt </br>
-- 4 WIF compressed: </br>
-L3UBXym7JYcMX91ssLgZzS2MvxTxjU3VRf9S4jJWXVFdDi4NsLcm </br>
-L3BEabkqcsppnTdzAWiizPEuf3Rvr8QEac21uRVsYb9hjesWBxuF </br>
-L31UCqx296TVRtgpCJspQJYHkwUeA4o3a2pvYKwRrCCAmi2NirDG </br>
-KyiR31LZTQ2hk1DRxEticnsQCA8tjFZcgJiKNaRArZME5fpfAjWj </br>
+5JiznUZskJpwodP3SR85vx5JKeopA3QpTK63BuziW8RmGGyJg81</br>
+5KMdQbcUFS3PBbC6VgitFrFuaca3gBY4BJt4jpQ2YTNdPZ1CbuE</br>
+5HwfeuhdFscL9YTQCLT2952dieZEtKbzJ328b4CR1v6YUVLu2D7</br>
+5J9J63iW7s5p54T569qstediqNgBTLXpUmxUtQwsXTaHz3JCsKt</br>
+- 4 WIF compressed:</br>
+L3UBXym7JYcMX91ssLgZzS2MvxTxjU3VRf9S4jJWXVFdDi4NsLcm</br>
+L3BEabkqcsppnTdzAWiizPEuf3Rvr8QEac21uRVsYb9hjesWBxuF</br>
+L31UCqx296TVRtgpCJspQJYHkwUeA4o3a2pvYKwRrCCAmi2NirDG</br>
+KyiR31LZTQ2hk1DRxEticnsQCA8tjFZcgJiKNaRArZME5fpfAjWj</br>
 - [Make your own](https://secretscan.org/PrivateKeyWif) WIF or HEX for test
 - For searching for uncompressed WIF 5.. (51 length) use the **-b** parameter!
 
@@ -189,7 +189,9 @@ Run: ```Fialka.exe -u -t 6 -r 12 -s SHwfehdFcL -n 3 -z 2ieZEtK -m address --coin
 - -n ? how many letters to randomize? </br>
 - -z second part of the key (you can do without it) </br>
 - For minikeys S... (length 22) use -u parameter or S... (length 30) use -b parameter</br>
-Run: ```Fialka.exe -u -t 1 -r 13 -s SYXqbKXyX -n 4 -z 3cSMV7Csa -m address --coin BTC 1KM1Wq1boMka4M4vavQX5Zyc281G8SbuCQ```
+Run: ```Fialka.exe -u -t 1 -r 13 -s SYXqbKXyX -n 4 -z 3cSMV7Csa -m address --coin BTC 1KM1Wq1boMka4M4vavQX5Zyc281G8SbuCQ```</br>
+if full random:</br>
+Run: ```Fialka.exe -u -t 6 -r 13 -s S -n 21 -m addresses --coin BTC -i test.bin```
 
 ![Mode 13 example](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r13.png "Fialka M-125")
 
