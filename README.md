@@ -307,9 +307,10 @@ C:\Users\BOSS>Fialka.exe -b -t 6 -r 14 -n 38 -m addresses --coin BTC -i test.bin
   ```
 ## Mode 15
 ### Random search part WIF + checksum check
-- -s part1 (maybe without the first part) 
+- -s ? part1 (maybe without the first part) 
 - -n ? how many random letters 
-- -z part2 or checkeum (possible without the second part) 
+- -z ? part2 or checkeum (possible without the second part) </br>
+
 Run: ```Fialka.exe -t 6 -r 15 -s L3UBXym7JYcMX91 -n 4 -z ZzS2MvxTxjU3VRf9S4jJWXVFdDi4NsLcm -m addresses --coin BTC -i test.bin``` 
 ![Mode 15 example](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r15.png "Fialka M-125")
 
