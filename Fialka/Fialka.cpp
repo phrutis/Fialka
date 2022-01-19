@@ -311,7 +311,7 @@ void Fialka::InitGenratorTable()
 		}
 		if (zez == "Passphrases") {
 			printf("  Loaded       : %d Passphrases \n", stope);
-			printf("  Rotor        : Only letters and symbols: A-Za-z0-9¿-ﬂ‡-ˇ∏®¸⁄‹˙ `~!@#$%&*()-_=+{}|;:'<>,./? others will be Skipped!\n");
+			printf("  Rotor        : Only letters and symbols: A-Za-z0-9–ê-–Ø–∞-—è—ë–Å—å–™–¨—ä `~!@#$%&*()-_=+{}|;:'<>,./? others will be Skipped!\n");
 
 		}
 		if (zez == "BIP") {
@@ -2816,7 +2816,14 @@ void Fialka::InitGenratorTable()
 		printf("\n  Mode         : %.0f \n", (double)rekey);
 		printf("  Rotor        : Paralleland sequential search for WIF values. MAX -t 12, 1 core = 1 line\n");
 		printf("  Rotor        : Save checkpoints every 5 minutes in NEXT-WIF.txt\n");
-		printf("  Rotor        : Activated filter-replacement of 3 identical letters (AAA->AAB) every 1 minute\n");
+		if (seed == "Filter") {
+			printf("  Rotor        : Activated filter-replacement of 3 identical letters (AAA->AAB) every 1 minute\n");
+		}
+		else {
+			printf("  Rotor        : Disabled AAA-AAB filter! Enable filter use: -s Filter \n");
+		
+		}
+		
 		printf("  Rotor        : If the checksum (32 bit) does not equal the private key, skip...\n");
 		if (nbit2 > 12) {
 			HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -3535,6 +3542,7 @@ void Fialka::InitGenratorTable()
 		printf("  Rotor        : %s[random %d letters]%s \n", seed.c_str(), nbit, zez.c_str());
 		printf("  Rotor        : If the checksum 32 bit (8 last letters in a WIF) does not equal the private key, SKIP...\n");
 		printf("  Site         : https://github.com/phrutis/Fialka \n  Donate       : bc1qh2mvnf5fujg93mwl8pe688yucaw9sflmwsukz9 \n");
+		
 		if (nbit2 > 12) {
 			HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 			SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_INTENSITY);
@@ -4035,7 +4043,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 			while (getline(file77, s77)) {
 				bt++;
 				if (bt < kusok + kusok) {
-					if (regex_search(s77, regex("[^¿-ﬂ‡-ˇA-Za-z0-9∏®¸⁄‹˙ `~!@#$%&*()-_=+{}|;:'<>,./?\r\n]"))) {
+					if (regex_search(s77, regex("[^–ê-–Ø–∞-—èA-Za-z0-9—ë–Å—å–™–¨—ä `~!@#$%&*()-_=+{}|;:'<>,./?\r\n]"))) {
 						counters2 += 1;
 					}
 					else {
@@ -4751,7 +4759,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 			while (getline(file77, s78)) {
 				bt1++;
 				if (bt1 > kusok) {
-					if (regex_search(s78, regex("[^¿-ﬂ‡-ˇA-Za-z0-9∏®¸⁄‹˙ `~!@#$%&*()-_=+{}|;:'<>,./?\r\n]"))) {
+					if (regex_search(s78, regex("[^–ê-–Ø–∞-—èA-Za-z0-9—ë–Å—å–™–¨—ä `~!@#$%&*()-_=+{}|;:'<>,./?\r\n]"))) {
 						counters2 += 1;
 					}
 					else {
@@ -4862,7 +4870,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 			while (getline(file77, s79)) {
 				bt2++;
 				if (bt2 > kusok + kusok) {
-					if (regex_search(s79, regex("[^¿-ﬂ‡-ˇA-Za-z0-9∏®¸⁄‹˙ `~!@#$%&*()-_=+{}|;:'<>,./?\r\n]"))) {
+					if (regex_search(s79, regex("[^–ê-–Ø–∞-—èA-Za-z0-9—ë–Å—å–™–¨—ä `~!@#$%&*()-_=+{}|;:'<>,./?\r\n]"))) {
 						counters2 += 1;
 					}
 					else {
@@ -4972,7 +4980,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 			while (getline(file77, sk8)) {
 				bt3++;
 				if (bt3 > kusok * 3) {
-					if (regex_search(sk8, regex("[^¿-ﬂ‡-ˇA-Za-z0-9∏®¸⁄‹˙ `~!@#$%&*()-_=+{}|;:'<>,./?\r\n]"))) {
+					if (regex_search(sk8, regex("[^–ê-–Ø–∞-—èA-Za-z0-9—ë–Å—å–™–¨—ä `~!@#$%&*()-_=+{}|;:'<>,./?\r\n]"))) {
 						counters2 += 1;
 					}
 					else {
@@ -5082,7 +5090,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 			while (getline(file77, sk9)) {
 				bt4++;
 				if (bt4 > kusok * 4) {
-					if (regex_search(sk9, regex("[^¿-ﬂ‡-ˇA-Za-z0-9∏®¸⁄‹˙ `~!@#$%&*()-_=+{}|;:'<>,./?\r\n]"))) {
+					if (regex_search(sk9, regex("[^–ê-–Ø–∞-—èA-Za-z0-9—ë–Å—å–™–¨—ä `~!@#$%&*()-_=+{}|;:'<>,./?\r\n]"))) {
 						counters2 += 1;
 					}
 					else {
@@ -5192,7 +5200,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 			while (getline(file77, sr7)) {
 				bt5++;
 				if (bt5 > kusok * 5) {
-					if (regex_search(sr7, regex("[^¿-ﬂ‡-ˇA-Za-z0-9∏®¸⁄‹˙ `~!@#$%&*()-_=+{}|;:'<>,./?\r\n]"))) {
+					if (regex_search(sr7, regex("[^–ê-–Ø–∞-—èA-Za-z0-9—ë–Å—å–™–¨—ä `~!@#$%&*()-_=+{}|;:'<>,./?\r\n]"))) {
 						counters2 += 1;
 					}
 					else {
@@ -5302,7 +5310,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 			while (getline(file77, tr6)) {
 				bt6++;
 				if (bt6 > kusok * 6) {
-					if (regex_search(tr6, regex("[^¿-ﬂ‡-ˇA-Za-z0-9∏®¸⁄‹˙ `~!@#$%&*()-_=+{}|;:'<>,./?\r\n]"))) {
+					if (regex_search(tr6, regex("[^–ê-–Ø–∞-—èA-Za-z0-9—ë–Å—å–™–¨—ä `~!@#$%&*()-_=+{}|;:'<>,./?\r\n]"))) {
 						counters2 += 1;
 					}
 					else {
@@ -5412,7 +5420,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 			while (getline(file77, tr7)) {
 				bt7++;
 				if (bt7 > kusok * 7) {
-					if (regex_search(tr7, regex("[^¿-ﬂ‡-ˇA-Za-z0-9∏®¸⁄‹˙ `~!@#$%&*()-_=+{}|;:'<>,./?\r\n]"))) {
+					if (regex_search(tr7, regex("[^–ê-–Ø–∞-—èA-Za-z0-9—ë–Å—å–™–¨—ä `~!@#$%&*()-_=+{}|;:'<>,./?\r\n]"))) {
 						counters2 += 1;
 					}
 					else {
@@ -5521,7 +5529,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 			while (getline(file77, tr8)) {
 				bt8++;
 				if (bt8 > kusok * 8) {
-					if (regex_search(tr8, regex("[^¿-ﬂ‡-ˇA-Za-z0-9∏®¸⁄‹˙ `~!@#$%&*()-_=+{}|;:'<>,./?\r\n]"))) {
+					if (regex_search(tr8, regex("[^–ê-–Ø–∞-—èA-Za-z0-9—ë–Å—å–™–¨—ä `~!@#$%&*()-_=+{}|;:'<>,./?\r\n]"))) {
 						counters2 += 1;
 					}
 					else {
@@ -5630,7 +5638,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 			while (getline(file77, tr9)) {
 				bt9++;
 				if (bt9 > kusok * 9) {
-					if (regex_search(tr9, regex("[^¿-ﬂ‡-ˇA-Za-z0-9∏®¸⁄‹˙ `~!@#$%&*()-_=+{}|;:'<>,./?\r\n]"))) {
+					if (regex_search(tr9, regex("[^–ê-–Ø–∞-—èA-Za-z0-9—ë–Å—å–™–¨—ä `~!@#$%&*()-_=+{}|;:'<>,./?\r\n]"))) {
 						counters2 += 1;
 					}
 					else {
@@ -5739,7 +5747,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 			while (getline(file77, gtr9)) {
 				btt++;
 				if (btt > kusok * 10) {
-					if (regex_search(gtr9, regex("[^¿-ﬂ‡-ˇA-Za-z0-9∏®¸⁄‹˙ `~!@#$%&*()-_=+{}|;:'<>,./?\r\n]"))) {
+					if (regex_search(gtr9, regex("[^–ê-–Ø–∞-—èA-Za-z0-9—ë–Å—å–™–¨—ä `~!@#$%&*()-_=+{}|;:'<>,./?\r\n]"))) {
 						counters2 += 1;
 					}
 					else {
@@ -25697,236 +25705,239 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 			str = increment(last);
 			string input = str;
 			
-			if (zhdat == 60 || zhdat < 1) {
+			if (seed == "Filter") {
 
-				int asciiArray[256];
-				char ch;
-				int charconv;
-				for (int i = 0; i < 256; i++)
-					asciiArray[i] = 0;
-				for (unsigned int i = 0; i < str.length(); i++)
-				{
-					ch = str[i];
-					charconv = static_cast<int>(ch);
-					asciiArray[charconv]++;
-				}
+				if (zhdat == 60 || zhdat < 1) {
 
-				for (unsigned int i = 0; i < str.length(); i++)
-				{
-					char static alreadyprinted;
-					char ch = str[i];
-
-					if ((asciiArray[ch] > 2) && (ch != alreadyprinted) && (find(alreadyprintedcharacters.begin(), alreadyprintedcharacters.end(), ch) == alreadyprintedcharacters.end()))
+					int asciiArray[256];
+					char ch;
+					int charconv;
+					for (int i = 0; i < 256; i++)
+						asciiArray[i] = 0;
+					for (unsigned int i = 0; i < str.length(); i++)
 					{
-						string proverka = str;
-						string proverka1 = regex_replace(proverka, regex("AAA"), "AAB");
-						string proverka2 = regex_replace(proverka1, regex("AAa"), "AAb");
-						string proverka3 = regex_replace(proverka2, regex("Aaa"), "Aab");
-						string proverka4 = regex_replace(proverka3, regex("aaa"), "aab");
-						string proverka5 = regex_replace(proverka4, regex("aaA"), "aaB");
-						string proverka6 = regex_replace(proverka5, regex("aAA"), "aAB");
-						string proverka7 = regex_replace(proverka6, regex("aAa"), "aAb");
-						string proverka8 = regex_replace(proverka7, regex("AaA"), "AaB");
-						string proverka9 = regex_replace(proverka8, regex("BBB"), "BBC");
-						string proverka10 = regex_replace(proverka9, regex("BBb"), "BBc");
-						string proverka11 = regex_replace(proverka10, regex("Bbb"), "Bbc");
-						string proverka12 = regex_replace(proverka11, regex("bbb"), "bbc");
-						string proverka13 = regex_replace(proverka12, regex("bbB"), "bbC");
-						string proverka14 = regex_replace(proverka13, regex("bBB"), "bBC");
-						string proverka15 = regex_replace(proverka14, regex("bBb"), "bBc");
-						string proverka16 = regex_replace(proverka15, regex("BbB"), "BbC");
-						string proverka17 = regex_replace(proverka16, regex("CCC"), "CCD");
-						string proverka18 = regex_replace(proverka17, regex("CCc"), "CCd");
-						string proverka19 = regex_replace(proverka18, regex("Ccc"), "Ccd");
-						string proverka20 = regex_replace(proverka19, regex("ccc"), "ccd");
-						string proverka21 = regex_replace(proverka20, regex("ccC"), "ccD");
-						string proverka22 = regex_replace(proverka21, regex("cCC"), "cCD");
-						string proverka23 = regex_replace(proverka22, regex("cCc"), "cCd");
-						string proverka24 = regex_replace(proverka23, regex("CcC"), "CcD");
-						string proverka25 = regex_replace(proverka24, regex("DDD"), "DDE");
-						string proverka26 = regex_replace(proverka25, regex("DDd"), "DDe");
-						string proverka27 = regex_replace(proverka26, regex("Ddd"), "Dde");
-						string proverka28 = regex_replace(proverka27, regex("ddd"), "dde");
-						string proverka29 = regex_replace(proverka28, regex("ddD"), "ddE");
-						string proverka30 = regex_replace(proverka29, regex("dDD"), "dDE");
-						string proverka31 = regex_replace(proverka30, regex("dDd"), "dDe");
-						string proverka32 = regex_replace(proverka31, regex("DdD"), "DdE");
-						string proverka33 = regex_replace(proverka32, regex("EEE"), "EEF");
-						string proverka34 = regex_replace(proverka33, regex("EEe"), "EEf");
-						string proverka35 = regex_replace(proverka34, regex("Eee"), "Eef");
-						string proverka36 = regex_replace(proverka35, regex("eee"), "eef");
-						string proverka37 = regex_replace(proverka36, regex("eeE"), "eeF");
-						string proverka38 = regex_replace(proverka37, regex("eEE"), "eEF");
-						string proverka39 = regex_replace(proverka38, regex("eEe"), "eEf");
-						string proverka40 = regex_replace(proverka39, regex("EeE"), "EeF");
-						string proverka41 = regex_replace(proverka40, regex("FFF"), "FFG");
-						string proverka42 = regex_replace(proverka41, regex("FFf"), "FFg");
-						string proverka43 = regex_replace(proverka42, regex("Fff"), "Ffg");
-						string proverka44 = regex_replace(proverka43, regex("fff"), "ffg");
-						string proverka45 = regex_replace(proverka44, regex("ffF"), "ffG");
-						string proverka46 = regex_replace(proverka45, regex("fFF"), "fFG");
-						string proverka47 = regex_replace(proverka46, regex("fFf"), "fFg");
-						string proverka48 = regex_replace(proverka47, regex("FfF"), "FfG");
-						string proverka49 = regex_replace(proverka48, regex("GGG"), "GGH");
-						string proverka50 = regex_replace(proverka49, regex("GGg"), "GGh");
-						string proverka51 = regex_replace(proverka50, regex("Ggg"), "Ggh");
-						string proverka52 = regex_replace(proverka51, regex("ggg"), "ggh");
-						string proverka53 = regex_replace(proverka52, regex("ggG"), "ggH");
-						string proverka54 = regex_replace(proverka53, regex("gGG"), "gGH");
-						string proverka55 = regex_replace(proverka54, regex("gGg"), "gGh");
-						string proverka56 = regex_replace(proverka55, regex("GgG"), "GgH");
-						string proverka57 = regex_replace(proverka56, regex("HHH"), "HHI");
-						string proverka58 = regex_replace(proverka57, regex("HHh"), "HHi");
-						string proverka59 = regex_replace(proverka58, regex("Hhh"), "Hhi");
-						string proverka60 = regex_replace(proverka59, regex("hhh"), "hhi");
-						string proverka61 = regex_replace(proverka60, regex("hhH"), "hhI");
-						string proverka62 = regex_replace(proverka61, regex("hHH"), "hHI");
-						string proverka63 = regex_replace(proverka62, regex("hHh"), "hHi");
-						string proverka64 = regex_replace(proverka63, regex("HhH"), "HhI");
-						string proverka65 = regex_replace(proverka64, regex("III"), "IIJ");
-						string proverka66 = regex_replace(proverka65, regex("IIi"), "IIj");
-						string proverka67 = regex_replace(proverka66, regex("Iii"), "Iij");
-						string proverka68 = regex_replace(proverka67, regex("iii"), "iij");
-						string proverka69 = regex_replace(proverka68, regex("iiI"), "iiJ");
-						string proverka70 = regex_replace(proverka69, regex("iII"), "iIJ");
-						string proverka71 = regex_replace(proverka70, regex("iIi"), "iIj");
-						string proverka72 = regex_replace(proverka71, regex("IiI"), "IiJ");
-						string proverka73 = regex_replace(proverka72, regex("JJJ"), "JJK");
-						string proverka74 = regex_replace(proverka73, regex("JJj"), "JJk");
-						string proverka75 = regex_replace(proverka74, regex("Jjj"), "Jjk");
-						string proverka76 = regex_replace(proverka75, regex("jjj"), "jjk");
-						string proverka77 = regex_replace(proverka76, regex("jjJ"), "jjK");
-						string proverka78 = regex_replace(proverka77, regex("jJJ"), "jJK");
-						string proverka79 = regex_replace(proverka78, regex("jJj"), "jJk");
-						string proverka80 = regex_replace(proverka79, regex("JjJ"), "JjK");
-						string proverka81 = regex_replace(proverka80, regex("KKK"), "KKL");
-						string proverka82 = regex_replace(proverka81, regex("KKk"), "KKl");
-						string proverka83 = regex_replace(proverka82, regex("Kkk"), "Kkl");
-						string proverka84 = regex_replace(proverka83, regex("kkk"), "kkl");
-						string proverka85 = regex_replace(proverka84, regex("kkK"), "kkL");
-						string proverka86 = regex_replace(proverka85, regex("kKK"), "kKL");
-						string proverka87 = regex_replace(proverka86, regex("kKk"), "kKl");
-						string proverka88 = regex_replace(proverka87, regex("KkK"), "KkL");
-						string proverka89 = regex_replace(proverka88, regex("LLL"), "LLM");
-						string proverka90 = regex_replace(proverka89, regex("LLl"), "LLm");
-						string proverka91 = regex_replace(proverka90, regex("Lll"), "Llm");
-						string proverka92 = regex_replace(proverka91, regex("lll"), "llm");
-						string proverka93 = regex_replace(proverka92, regex("llL"), "llM");
-						string proverka94 = regex_replace(proverka93, regex("lLL"), "lLM");
-						string proverka95 = regex_replace(proverka94, regex("lLl"), "lLm");
-						string proverka96 = regex_replace(proverka95, regex("LlL"), "LlM");
-						string proverka97 = regex_replace(proverka96, regex("MMM"), "MMN");
-						string proverka98 = regex_replace(proverka97, regex("MMm"), "MMn");
-						string proverka99 = regex_replace(proverka98, regex("Mmm"), "Mmn");
-						string proverka100 = regex_replace(proverka99, regex("mmm"), "mmn");
-						string proverka101 = regex_replace(proverka100, regex("mmM"), "mmN");
-						string proverka102 = regex_replace(proverka101, regex("mMM"), "mMN");
-						string proverka103 = regex_replace(proverka102, regex("mMm"), "mMn");
-						string proverka104 = regex_replace(proverka103, regex("MmM"), "MmN");
-						string proverka105 = regex_replace(proverka104, regex("NNN"), "NNO");
-						string proverka106 = regex_replace(proverka105, regex("NNn"), "NNo");
-						string proverka107 = regex_replace(proverka106, regex("Nnn"), "Nno");
-						string proverka108 = regex_replace(proverka107, regex("nnn"), "nno");
-						string proverka109 = regex_replace(proverka108, regex("nnN"), "nnO");
-						string proverka110 = regex_replace(proverka109, regex("nNN"), "nNO");
-						string proverka111 = regex_replace(proverka110, regex("nNn"), "nNo");
-						string proverka112 = regex_replace(proverka111, regex("NnN"), "NnO");
-						string proverka113 = regex_replace(proverka112, regex("OOO"), "OOP");
-						string proverka114 = regex_replace(proverka113, regex("OOo"), "OOp");
-						string proverka115 = regex_replace(proverka114, regex("Ooo"), "Oop");
-						string proverka116 = regex_replace(proverka115, regex("ooo"), "oop");
-						string proverka117 = regex_replace(proverka116, regex("ooO"), "ooP");
-						string proverka118 = regex_replace(proverka117, regex("oOO"), "oOP");
-						string proverka119 = regex_replace(proverka118, regex("oOo"), "oOp");
-						string proverka120 = regex_replace(proverka119, regex("OoO"), "OoP");
-						string proverka121 = regex_replace(proverka120, regex("PPP"), "PPQ");
-						string proverka122 = regex_replace(proverka121, regex("PPp"), "PPq");
-						string proverka123 = regex_replace(proverka122, regex("Ppp"), "Ppq");
-						string proverka124 = regex_replace(proverka123, regex("ppp"), "ppq");
-						string proverka125 = regex_replace(proverka124, regex("ppP"), "ppQ");
-						string proverka126 = regex_replace(proverka125, regex("pPP"), "pPQ");
-						string proverka127 = regex_replace(proverka126, regex("pPp"), "pPq");
-						string proverka128 = regex_replace(proverka127, regex("PpP"), "PpQ");
-						string proverka129 = regex_replace(proverka128, regex("QQQ"), "QQR");
-						string proverka130 = regex_replace(proverka129, regex("QQq"), "QQr");
-						string proverka131 = regex_replace(proverka130, regex("Qqq"), "Qqr");
-						string proverka132 = regex_replace(proverka131, regex("qqq"), "qqr");
-						string proverka133 = regex_replace(proverka132, regex("qqQ"), "qqR");
-						string proverka134 = regex_replace(proverka133, regex("qQQ"), "qQR");
-						string proverka135 = regex_replace(proverka134, regex("qQq"), "qQr");
-						string proverka136 = regex_replace(proverka135, regex("QqQ"), "QqR");
-						string proverka137 = regex_replace(proverka136, regex("RRR"), "RRS");
-						string proverka138 = regex_replace(proverka137, regex("RRr"), "RRs");
-						string proverka139 = regex_replace(proverka138, regex("Rrr"), "Rrs");
-						string proverka140 = regex_replace(proverka139, regex("rrr"), "rrs");
-						string proverka141 = regex_replace(proverka140, regex("rrR"), "rrS");
-						string proverka142 = regex_replace(proverka141, regex("rRR"), "rRS");
-						string proverka143 = regex_replace(proverka142, regex("rRr"), "rRs");
-						string proverka144 = regex_replace(proverka143, regex("RrR"), "RrS");
-						string proverka145 = regex_replace(proverka144, regex("SSS"), "SST");
-						string proverka146 = regex_replace(proverka145, regex("SSs"), "SSt");
-						string proverka147 = regex_replace(proverka146, regex("Sss"), "Sst");
-						string proverka148 = regex_replace(proverka147, regex("sss"), "sst");
-						string proverka149 = regex_replace(proverka148, regex("ssS"), "ssT");
-						string proverka150 = regex_replace(proverka149, regex("sSS"), "sST");
-						string proverka151 = regex_replace(proverka150, regex("sSs"), "sSt");
-						string proverka152 = regex_replace(proverka151, regex("SsS"), "SsT");
-						string proverka153 = regex_replace(proverka152, regex("TTT"), "TTU");
-						string proverka154 = regex_replace(proverka153, regex("TTt"), "TTu");
-						string proverka155 = regex_replace(proverka154, regex("Ttt"), "Ttu");
-						string proverka156 = regex_replace(proverka155, regex("ttt"), "ttu");
-						string proverka157 = regex_replace(proverka156, regex("ttT"), "ttU");
-						string proverka158 = regex_replace(proverka157, regex("tTT"), "tTU");
-						string proverka159 = regex_replace(proverka158, regex("tTt"), "tTu");
-						string proverka160 = regex_replace(proverka159, regex("TtT"), "TtU");
-						string proverka161 = regex_replace(proverka160, regex("UUU"), "UUV");
-						string proverka162 = regex_replace(proverka161, regex("UUu"), "UUv");
-						string proverka163 = regex_replace(proverka162, regex("Uuu"), "Uvv");
-						string proverka164 = regex_replace(proverka163, regex("uuu"), "uuv");
-						string proverka165 = regex_replace(proverka164, regex("uuU"), "uuV");
-						string proverka166 = regex_replace(proverka165, regex("uUU"), "uUV");
-						string proverka167 = regex_replace(proverka166, regex("uUu"), "uUv");
-						string proverka168 = regex_replace(proverka167, regex("UuU"), "UuV");
-						string proverka169 = regex_replace(proverka168, regex("VVV"), "VVW");
-						string proverka170 = regex_replace(proverka169, regex("VVv"), "VVw");
-						string proverka171 = regex_replace(proverka170, regex("Vvv"), "Vvw");
-						string proverka172 = regex_replace(proverka171, regex("vvv"), "vvw");
-						string proverka173 = regex_replace(proverka172, regex("vvV"), "vvW");
-						string proverka174 = regex_replace(proverka173, regex("vVV"), "vVW");
-						string proverka175 = regex_replace(proverka174, regex("vVv"), "vVw");
-						string proverka176 = regex_replace(proverka175, regex("VvV"), "VvW");
-						string proverka177 = regex_replace(proverka176, regex("WWW"), "WWX");
-						string proverka178 = regex_replace(proverka177, regex("WWw"), "WWx");
-						string proverka179 = regex_replace(proverka178, regex("Www"), "Wwx");
-						string proverka180 = regex_replace(proverka179, regex("www"), "wwx");
-						string proverka181 = regex_replace(proverka180, regex("wwW"), "wwX");
-						string proverka182 = regex_replace(proverka181, regex("wWW"), "wWX");
-						string proverka183 = regex_replace(proverka182, regex("wWw"), "wWx");
-						string proverka184 = regex_replace(proverka183, regex("WwW"), "WwX");
-						string proverka185 = regex_replace(proverka184, regex("XXX"), "XXY");
-						string proverka186 = regex_replace(proverka185, regex("XXx"), "XXy");
-						string proverka187 = regex_replace(proverka186, regex("Xxx"), "Xxy");
-						string proverka188 = regex_replace(proverka187, regex("xxx"), "xxy");
-						string proverka189 = regex_replace(proverka188, regex("xxX"), "xxY");
-						string proverka190 = regex_replace(proverka189, regex("xXX"), "xXY");
-						string proverka191 = regex_replace(proverka190, regex("xXx"), "xXy");
-						string proverka192 = regex_replace(proverka191, regex("XxX"), "XxY");
-						string proverka193 = regex_replace(proverka192, regex("YYY"), "YYZ");
-						string proverka194 = regex_replace(proverka193, regex("YYy"), "YYz");
-						string proverka195 = regex_replace(proverka194, regex("Yyy"), "Yyz");
-						string proverka196 = regex_replace(proverka195, regex("yyy"), "yyz");
-						string proverka197 = regex_replace(proverka196, regex("yyY"), "yyZ");
-						string proverka198 = regex_replace(proverka197, regex("yYY"), "yYZ");
-						string proverka199 = regex_replace(proverka198, regex("yYy"), "yYz");
-						string proverka200 = regex_replace(proverka199, regex("YyY"), "YyZ");
-						zhdat = 1;
-						kusok += 1;
-						if (proverka200 != str) {
-							std::stringstream sst;
-							sst << "  Filter 3 litters Replace : " << str << "  ->  " << proverka200 << " Total: " << kusok;
-							std::string zamena = sst.str();
-							SetConsoleTitle(zamena.c_str());
-							str = proverka200;
+						ch = str[i];
+						charconv = static_cast<int>(ch);
+						asciiArray[charconv]++;
+					}
+
+					for (unsigned int i = 0; i < str.length(); i++)
+					{
+						char static alreadyprinted;
+						char ch = str[i];
+
+						if ((asciiArray[ch] > 2) && (ch != alreadyprinted) && (find(alreadyprintedcharacters.begin(), alreadyprintedcharacters.end(), ch) == alreadyprintedcharacters.end()))
+						{
+							string proverka = str;
+							string proverka1 = regex_replace(proverka, regex("AAA"), "AAB");
+							string proverka2 = regex_replace(proverka1, regex("AAa"), "AAb");
+							string proverka3 = regex_replace(proverka2, regex("Aaa"), "Aab");
+							string proverka4 = regex_replace(proverka3, regex("aaa"), "aab");
+							string proverka5 = regex_replace(proverka4, regex("aaA"), "aaB");
+							string proverka6 = regex_replace(proverka5, regex("aAA"), "aAB");
+							string proverka7 = regex_replace(proverka6, regex("aAa"), "aAb");
+							string proverka8 = regex_replace(proverka7, regex("AaA"), "AaB");
+							string proverka9 = regex_replace(proverka8, regex("BBB"), "BBC");
+							string proverka10 = regex_replace(proverka9, regex("BBb"), "BBc");
+							string proverka11 = regex_replace(proverka10, regex("Bbb"), "Bbc");
+							string proverka12 = regex_replace(proverka11, regex("bbb"), "bbc");
+							string proverka13 = regex_replace(proverka12, regex("bbB"), "bbC");
+							string proverka14 = regex_replace(proverka13, regex("bBB"), "bBC");
+							string proverka15 = regex_replace(proverka14, regex("bBb"), "bBc");
+							string proverka16 = regex_replace(proverka15, regex("BbB"), "BbC");
+							string proverka17 = regex_replace(proverka16, regex("CCC"), "CCD");
+							string proverka18 = regex_replace(proverka17, regex("CCc"), "CCd");
+							string proverka19 = regex_replace(proverka18, regex("Ccc"), "Ccd");
+							string proverka20 = regex_replace(proverka19, regex("ccc"), "ccd");
+							string proverka21 = regex_replace(proverka20, regex("ccC"), "ccD");
+							string proverka22 = regex_replace(proverka21, regex("cCC"), "cCD");
+							string proverka23 = regex_replace(proverka22, regex("cCc"), "cCd");
+							string proverka24 = regex_replace(proverka23, regex("CcC"), "CcD");
+							string proverka25 = regex_replace(proverka24, regex("DDD"), "DDE");
+							string proverka26 = regex_replace(proverka25, regex("DDd"), "DDe");
+							string proverka27 = regex_replace(proverka26, regex("Ddd"), "Dde");
+							string proverka28 = regex_replace(proverka27, regex("ddd"), "dde");
+							string proverka29 = regex_replace(proverka28, regex("ddD"), "ddE");
+							string proverka30 = regex_replace(proverka29, regex("dDD"), "dDE");
+							string proverka31 = regex_replace(proverka30, regex("dDd"), "dDe");
+							string proverka32 = regex_replace(proverka31, regex("DdD"), "DdE");
+							string proverka33 = regex_replace(proverka32, regex("EEE"), "EEF");
+							string proverka34 = regex_replace(proverka33, regex("EEe"), "EEf");
+							string proverka35 = regex_replace(proverka34, regex("Eee"), "Eef");
+							string proverka36 = regex_replace(proverka35, regex("eee"), "eef");
+							string proverka37 = regex_replace(proverka36, regex("eeE"), "eeF");
+							string proverka38 = regex_replace(proverka37, regex("eEE"), "eEF");
+							string proverka39 = regex_replace(proverka38, regex("eEe"), "eEf");
+							string proverka40 = regex_replace(proverka39, regex("EeE"), "EeF");
+							string proverka41 = regex_replace(proverka40, regex("FFF"), "FFG");
+							string proverka42 = regex_replace(proverka41, regex("FFf"), "FFg");
+							string proverka43 = regex_replace(proverka42, regex("Fff"), "Ffg");
+							string proverka44 = regex_replace(proverka43, regex("fff"), "ffg");
+							string proverka45 = regex_replace(proverka44, regex("ffF"), "ffG");
+							string proverka46 = regex_replace(proverka45, regex("fFF"), "fFG");
+							string proverka47 = regex_replace(proverka46, regex("fFf"), "fFg");
+							string proverka48 = regex_replace(proverka47, regex("FfF"), "FfG");
+							string proverka49 = regex_replace(proverka48, regex("GGG"), "GGH");
+							string proverka50 = regex_replace(proverka49, regex("GGg"), "GGh");
+							string proverka51 = regex_replace(proverka50, regex("Ggg"), "Ggh");
+							string proverka52 = regex_replace(proverka51, regex("ggg"), "ggh");
+							string proverka53 = regex_replace(proverka52, regex("ggG"), "ggH");
+							string proverka54 = regex_replace(proverka53, regex("gGG"), "gGH");
+							string proverka55 = regex_replace(proverka54, regex("gGg"), "gGh");
+							string proverka56 = regex_replace(proverka55, regex("GgG"), "GgH");
+							string proverka57 = regex_replace(proverka56, regex("HHH"), "HHI");
+							string proverka58 = regex_replace(proverka57, regex("HHh"), "HHi");
+							string proverka59 = regex_replace(proverka58, regex("Hhh"), "Hhi");
+							string proverka60 = regex_replace(proverka59, regex("hhh"), "hhi");
+							string proverka61 = regex_replace(proverka60, regex("hhH"), "hhI");
+							string proverka62 = regex_replace(proverka61, regex("hHH"), "hHI");
+							string proverka63 = regex_replace(proverka62, regex("hHh"), "hHi");
+							string proverka64 = regex_replace(proverka63, regex("HhH"), "HhI");
+							string proverka65 = regex_replace(proverka64, regex("III"), "IIJ");
+							string proverka66 = regex_replace(proverka65, regex("IIi"), "IIj");
+							string proverka67 = regex_replace(proverka66, regex("Iii"), "Iij");
+							string proverka68 = regex_replace(proverka67, regex("iii"), "iij");
+							string proverka69 = regex_replace(proverka68, regex("iiI"), "iiJ");
+							string proverka70 = regex_replace(proverka69, regex("iII"), "iIJ");
+							string proverka71 = regex_replace(proverka70, regex("iIi"), "iIj");
+							string proverka72 = regex_replace(proverka71, regex("IiI"), "IiJ");
+							string proverka73 = regex_replace(proverka72, regex("JJJ"), "JJK");
+							string proverka74 = regex_replace(proverka73, regex("JJj"), "JJk");
+							string proverka75 = regex_replace(proverka74, regex("Jjj"), "Jjk");
+							string proverka76 = regex_replace(proverka75, regex("jjj"), "jjk");
+							string proverka77 = regex_replace(proverka76, regex("jjJ"), "jjK");
+							string proverka78 = regex_replace(proverka77, regex("jJJ"), "jJK");
+							string proverka79 = regex_replace(proverka78, regex("jJj"), "jJk");
+							string proverka80 = regex_replace(proverka79, regex("JjJ"), "JjK");
+							string proverka81 = regex_replace(proverka80, regex("KKK"), "KKL");
+							string proverka82 = regex_replace(proverka81, regex("KKk"), "KKl");
+							string proverka83 = regex_replace(proverka82, regex("Kkk"), "Kkl");
+							string proverka84 = regex_replace(proverka83, regex("kkk"), "kkl");
+							string proverka85 = regex_replace(proverka84, regex("kkK"), "kkL");
+							string proverka86 = regex_replace(proverka85, regex("kKK"), "kKL");
+							string proverka87 = regex_replace(proverka86, regex("kKk"), "kKl");
+							string proverka88 = regex_replace(proverka87, regex("KkK"), "KkL");
+							string proverka89 = regex_replace(proverka88, regex("LLL"), "LLM");
+							string proverka90 = regex_replace(proverka89, regex("LLl"), "LLm");
+							string proverka91 = regex_replace(proverka90, regex("Lll"), "Llm");
+							string proverka92 = regex_replace(proverka91, regex("lll"), "llm");
+							string proverka93 = regex_replace(proverka92, regex("llL"), "llM");
+							string proverka94 = regex_replace(proverka93, regex("lLL"), "lLM");
+							string proverka95 = regex_replace(proverka94, regex("lLl"), "lLm");
+							string proverka96 = regex_replace(proverka95, regex("LlL"), "LlM");
+							string proverka97 = regex_replace(proverka96, regex("MMM"), "MMN");
+							string proverka98 = regex_replace(proverka97, regex("MMm"), "MMn");
+							string proverka99 = regex_replace(proverka98, regex("Mmm"), "Mmn");
+							string proverka100 = regex_replace(proverka99, regex("mmm"), "mmn");
+							string proverka101 = regex_replace(proverka100, regex("mmM"), "mmN");
+							string proverka102 = regex_replace(proverka101, regex("mMM"), "mMN");
+							string proverka103 = regex_replace(proverka102, regex("mMm"), "mMn");
+							string proverka104 = regex_replace(proverka103, regex("MmM"), "MmN");
+							string proverka105 = regex_replace(proverka104, regex("NNN"), "NNO");
+							string proverka106 = regex_replace(proverka105, regex("NNn"), "NNo");
+							string proverka107 = regex_replace(proverka106, regex("Nnn"), "Nno");
+							string proverka108 = regex_replace(proverka107, regex("nnn"), "nno");
+							string proverka109 = regex_replace(proverka108, regex("nnN"), "nnO");
+							string proverka110 = regex_replace(proverka109, regex("nNN"), "nNO");
+							string proverka111 = regex_replace(proverka110, regex("nNn"), "nNo");
+							string proverka112 = regex_replace(proverka111, regex("NnN"), "NnO");
+							string proverka113 = regex_replace(proverka112, regex("OOO"), "OOP");
+							string proverka114 = regex_replace(proverka113, regex("OOo"), "OOp");
+							string proverka115 = regex_replace(proverka114, regex("Ooo"), "Oop");
+							string proverka116 = regex_replace(proverka115, regex("ooo"), "oop");
+							string proverka117 = regex_replace(proverka116, regex("ooO"), "ooP");
+							string proverka118 = regex_replace(proverka117, regex("oOO"), "oOP");
+							string proverka119 = regex_replace(proverka118, regex("oOo"), "oOp");
+							string proverka120 = regex_replace(proverka119, regex("OoO"), "OoP");
+							string proverka121 = regex_replace(proverka120, regex("PPP"), "PPQ");
+							string proverka122 = regex_replace(proverka121, regex("PPp"), "PPq");
+							string proverka123 = regex_replace(proverka122, regex("Ppp"), "Ppq");
+							string proverka124 = regex_replace(proverka123, regex("ppp"), "ppq");
+							string proverka125 = regex_replace(proverka124, regex("ppP"), "ppQ");
+							string proverka126 = regex_replace(proverka125, regex("pPP"), "pPQ");
+							string proverka127 = regex_replace(proverka126, regex("pPp"), "pPq");
+							string proverka128 = regex_replace(proverka127, regex("PpP"), "PpQ");
+							string proverka129 = regex_replace(proverka128, regex("QQQ"), "QQR");
+							string proverka130 = regex_replace(proverka129, regex("QQq"), "QQr");
+							string proverka131 = regex_replace(proverka130, regex("Qqq"), "Qqr");
+							string proverka132 = regex_replace(proverka131, regex("qqq"), "qqr");
+							string proverka133 = regex_replace(proverka132, regex("qqQ"), "qqR");
+							string proverka134 = regex_replace(proverka133, regex("qQQ"), "qQR");
+							string proverka135 = regex_replace(proverka134, regex("qQq"), "qQr");
+							string proverka136 = regex_replace(proverka135, regex("QqQ"), "QqR");
+							string proverka137 = regex_replace(proverka136, regex("RRR"), "RRS");
+							string proverka138 = regex_replace(proverka137, regex("RRr"), "RRs");
+							string proverka139 = regex_replace(proverka138, regex("Rrr"), "Rrs");
+							string proverka140 = regex_replace(proverka139, regex("rrr"), "rrs");
+							string proverka141 = regex_replace(proverka140, regex("rrR"), "rrS");
+							string proverka142 = regex_replace(proverka141, regex("rRR"), "rRS");
+							string proverka143 = regex_replace(proverka142, regex("rRr"), "rRs");
+							string proverka144 = regex_replace(proverka143, regex("RrR"), "RrS");
+							string proverka145 = regex_replace(proverka144, regex("SSS"), "SST");
+							string proverka146 = regex_replace(proverka145, regex("SSs"), "SSt");
+							string proverka147 = regex_replace(proverka146, regex("Sss"), "Sst");
+							string proverka148 = regex_replace(proverka147, regex("sss"), "sst");
+							string proverka149 = regex_replace(proverka148, regex("ssS"), "ssT");
+							string proverka150 = regex_replace(proverka149, regex("sSS"), "sST");
+							string proverka151 = regex_replace(proverka150, regex("sSs"), "sSt");
+							string proverka152 = regex_replace(proverka151, regex("SsS"), "SsT");
+							string proverka153 = regex_replace(proverka152, regex("TTT"), "TTU");
+							string proverka154 = regex_replace(proverka153, regex("TTt"), "TTu");
+							string proverka155 = regex_replace(proverka154, regex("Ttt"), "Ttu");
+							string proverka156 = regex_replace(proverka155, regex("ttt"), "ttu");
+							string proverka157 = regex_replace(proverka156, regex("ttT"), "ttU");
+							string proverka158 = regex_replace(proverka157, regex("tTT"), "tTU");
+							string proverka159 = regex_replace(proverka158, regex("tTt"), "tTu");
+							string proverka160 = regex_replace(proverka159, regex("TtT"), "TtU");
+							string proverka161 = regex_replace(proverka160, regex("UUU"), "UUV");
+							string proverka162 = regex_replace(proverka161, regex("UUu"), "UUv");
+							string proverka163 = regex_replace(proverka162, regex("Uuu"), "Uvv");
+							string proverka164 = regex_replace(proverka163, regex("uuu"), "uuv");
+							string proverka165 = regex_replace(proverka164, regex("uuU"), "uuV");
+							string proverka166 = regex_replace(proverka165, regex("uUU"), "uUV");
+							string proverka167 = regex_replace(proverka166, regex("uUu"), "uUv");
+							string proverka168 = regex_replace(proverka167, regex("UuU"), "UuV");
+							string proverka169 = regex_replace(proverka168, regex("VVV"), "VVW");
+							string proverka170 = regex_replace(proverka169, regex("VVv"), "VVw");
+							string proverka171 = regex_replace(proverka170, regex("Vvv"), "Vvw");
+							string proverka172 = regex_replace(proverka171, regex("vvv"), "vvw");
+							string proverka173 = regex_replace(proverka172, regex("vvV"), "vvW");
+							string proverka174 = regex_replace(proverka173, regex("vVV"), "vVW");
+							string proverka175 = regex_replace(proverka174, regex("vVv"), "vVw");
+							string proverka176 = regex_replace(proverka175, regex("VvV"), "VvW");
+							string proverka177 = regex_replace(proverka176, regex("WWW"), "WWX");
+							string proverka178 = regex_replace(proverka177, regex("WWw"), "WWx");
+							string proverka179 = regex_replace(proverka178, regex("Www"), "Wwx");
+							string proverka180 = regex_replace(proverka179, regex("www"), "wwx");
+							string proverka181 = regex_replace(proverka180, regex("wwW"), "wwX");
+							string proverka182 = regex_replace(proverka181, regex("wWW"), "wWX");
+							string proverka183 = regex_replace(proverka182, regex("wWw"), "wWx");
+							string proverka184 = regex_replace(proverka183, regex("WwW"), "WwX");
+							string proverka185 = regex_replace(proverka184, regex("XXX"), "XXY");
+							string proverka186 = regex_replace(proverka185, regex("XXx"), "XXy");
+							string proverka187 = regex_replace(proverka186, regex("Xxx"), "Xxy");
+							string proverka188 = regex_replace(proverka187, regex("xxx"), "xxy");
+							string proverka189 = regex_replace(proverka188, regex("xxX"), "xxY");
+							string proverka190 = regex_replace(proverka189, regex("xXX"), "xXY");
+							string proverka191 = regex_replace(proverka190, regex("xXx"), "xXy");
+							string proverka192 = regex_replace(proverka191, regex("XxX"), "XxY");
+							string proverka193 = regex_replace(proverka192, regex("YYY"), "YYZ");
+							string proverka194 = regex_replace(proverka193, regex("YYy"), "YYz");
+							string proverka195 = regex_replace(proverka194, regex("Yyy"), "Yyz");
+							string proverka196 = regex_replace(proverka195, regex("yyy"), "yyz");
+							string proverka197 = regex_replace(proverka196, regex("yyY"), "yyZ");
+							string proverka198 = regex_replace(proverka197, regex("yYY"), "yYZ");
+							string proverka199 = regex_replace(proverka198, regex("yYy"), "yYz");
+							string proverka200 = regex_replace(proverka199, regex("YyY"), "YyZ");
+							zhdat = 1;
+							kusok += 1;
+							if (proverka200 != str) {
+								std::stringstream sst;
+								sst << "  Filter 3 litters Replace : " << str << "  ->  " << proverka200 << " Total: " << kusok;
+								std::string zamena = sst.str();
+								SetConsoleTitle(zamena.c_str());
+								str = proverka200;
+							}
 						}
 					}
 				}
@@ -28675,6 +28686,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 					if (c[0] != privKey0[33] || c[1] != privKey0[34] ||
 						c[2] != privKey0[35] || c[3] != privKey0[36]) {
 						counters[thId] += 1;
+						delete[] pass;
 					}
 					else {
 
@@ -28781,6 +28793,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 					if (c[0] != privKey0[34] || c[1] != privKey0[35] ||
 						c[2] != privKey0[36] || c[3] != privKey0[37]) {
 						counters[thId] += 1;
+						delete[] pass;
 					}
 					else {
 						key = ret0000;
@@ -28910,6 +28923,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 					if (c[0] != privKey0[33] || c[1] != privKey0[34] ||
 						c[2] != privKey0[35] || c[3] != privKey0[36]) {
 						counters[thId] += 1;
+						delete[] pass;
 					}
 					else {
 
@@ -29016,6 +29030,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 					if (c[0] != privKey0[34] || c[1] != privKey0[35] ||
 						c[2] != privKey0[36] || c[3] != privKey0[37]) {
 						counters[thId] += 1;
+						delete[] pass;
 					}
 					else {
 						key = ret0000;
@@ -29145,6 +29160,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 					if (c[0] != privKey0[33] || c[1] != privKey0[34] ||
 						c[2] != privKey0[35] || c[3] != privKey0[36]) {
 						counters[thId] += 1;
+						delete[] pass;
 					}
 					else {
 
@@ -29251,6 +29267,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 					if (c[0] != privKey0[34] || c[1] != privKey0[35] ||
 						c[2] != privKey0[36] || c[3] != privKey0[37]) {
 						counters[thId] += 1;
+						delete[] pass;
 					}
 					else {
 						key = ret0000;
@@ -29380,6 +29397,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 					if (c[0] != privKey0[33] || c[1] != privKey0[34] ||
 						c[2] != privKey0[35] || c[3] != privKey0[36]) {
 						counters[thId] += 1;
+						delete[] pass;
 					}
 					else {
 
@@ -29486,6 +29504,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 					if (c[0] != privKey0[34] || c[1] != privKey0[35] ||
 						c[2] != privKey0[36] || c[3] != privKey0[37]) {
 						counters[thId] += 1;
+						delete[] pass;
 					}
 					else {
 						key = ret0000;
@@ -29615,6 +29634,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 					if (c[0] != privKey0[33] || c[1] != privKey0[34] ||
 						c[2] != privKey0[35] || c[3] != privKey0[36]) {
 						counters[thId] += 1;
+						delete[] pass;
 					}
 					else {
 
@@ -29721,6 +29741,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 					if (c[0] != privKey0[34] || c[1] != privKey0[35] ||
 						c[2] != privKey0[36] || c[3] != privKey0[37]) {
 						counters[thId] += 1;
+						delete[] pass;
 					}
 					else {
 						key = ret0000;
@@ -29850,6 +29871,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 					if (c[0] != privKey0[33] || c[1] != privKey0[34] ||
 						c[2] != privKey0[35] || c[3] != privKey0[36]) {
 						counters[thId] += 1;
+						delete[] pass;
 					}
 					else {
 
@@ -29956,6 +29978,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 					if (c[0] != privKey0[34] || c[1] != privKey0[35] ||
 						c[2] != privKey0[36] || c[3] != privKey0[37]) {
 						counters[thId] += 1;
+						delete[] pass;
 					}
 					else {
 						key = ret0000;
@@ -30085,6 +30108,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 					if (c[0] != privKey0[33] || c[1] != privKey0[34] ||
 						c[2] != privKey0[35] || c[3] != privKey0[36]) {
 						counters[thId] += 1;
+						delete[] pass;
 					}
 					else {
 
@@ -30191,6 +30215,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 					if (c[0] != privKey0[34] || c[1] != privKey0[35] ||
 						c[2] != privKey0[36] || c[3] != privKey0[37]) {
 						counters[thId] += 1;
+						delete[] pass;
 					}
 					else {
 						key = ret0000;
@@ -30320,6 +30345,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 					if (c[0] != privKey0[33] || c[1] != privKey0[34] ||
 						c[2] != privKey0[35] || c[3] != privKey0[36]) {
 						counters[thId] += 1;
+						delete[] pass;
 					}
 					else {
 
@@ -30426,6 +30452,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 					if (c[0] != privKey0[34] || c[1] != privKey0[35] ||
 						c[2] != privKey0[36] || c[3] != privKey0[37]) {
 						counters[thId] += 1;
+						delete[] pass;
 					}
 					else {
 						key = ret0000;
@@ -30555,6 +30582,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 					if (c[0] != privKey0[33] || c[1] != privKey0[34] ||
 						c[2] != privKey0[35] || c[3] != privKey0[36]) {
 						counters[thId] += 1;
+						delete[] pass;
 					}
 					else {
 
@@ -30661,6 +30689,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 					if (c[0] != privKey0[34] || c[1] != privKey0[35] ||
 						c[2] != privKey0[36] || c[3] != privKey0[37]) {
 						counters[thId] += 1;
+						delete[] pass;
 					}
 					else {
 						key = ret0000;
@@ -30790,6 +30819,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 					if (c[0] != privKey0[33] || c[1] != privKey0[34] ||
 						c[2] != privKey0[35] || c[3] != privKey0[36]) {
 						counters[thId] += 1;
+						delete[] pass;
 					}
 					else {
 
@@ -30896,6 +30926,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 					if (c[0] != privKey0[34] || c[1] != privKey0[35] ||
 						c[2] != privKey0[36] || c[3] != privKey0[37]) {
 						counters[thId] += 1;
+						delete[] pass;
 					}
 					else {
 						key = ret0000;
@@ -31025,6 +31056,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 					if (c[0] != privKey0[33] || c[1] != privKey0[34] ||
 						c[2] != privKey0[35] || c[3] != privKey0[36]) {
 						counters[thId] += 1;
+						delete[] pass;
 					}
 					else {
 
@@ -31131,6 +31163,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 					if (c[0] != privKey0[34] || c[1] != privKey0[35] ||
 						c[2] != privKey0[36] || c[3] != privKey0[37]) {
 						counters[thId] += 1;
+						delete[] pass;
 					}
 					else {
 						key = ret0000;
@@ -31261,6 +31294,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 					if (c[0] != privKey0[33] || c[1] != privKey0[34] ||
 						c[2] != privKey0[35] || c[3] != privKey0[36]) {
 						counters[thId] += 1;
+						delete[] pass;
 					}
 					else {
 
@@ -31367,6 +31401,7 @@ void Fialka::FindKeyCPU(TH_PARAM * ph)
 					if (c[0] != privKey0[34] || c[1] != privKey0[35] ||
 						c[2] != privKey0[36] || c[3] != privKey0[37]) {
 						counters[thId] += 1;
+						delete[] pass;
 					}
 					else {
 						key = ret0000;
@@ -32931,3 +32966,4 @@ char* Fialka::toTimeStr(int sec, char* timeStr)
 //	//y = y / mpf_class(r);
 //	return 0;// y.get_d();
 //}
+
