@@ -205,7 +205,9 @@ Run: ```Fialka.exe -u -t 6 -r 13 -s S -n 21 -m addresses --coin BTC -i test.bin`
 L3BEabkqcsppnTdzAWiizPEuf3Rvr8QEac11uRVsYb9hjesWBxuF</br>
 L31UCqx296TVRtgpCJspQJYHkwUeA4o3a2avYKwRrCCAmi2NirDG</br>
 KyiR31LZTQ2hk1DRxEticnsQCA8tjFZcgJaKNaRArZME5fpfAjWj</br>
-Run: ```Fialka.exe -b -t 6 -r 14 -n 38 -m addresses --coin BTC -i test.bin``` 
+Run: ```Fialka.exe -b -t 6 -r 14 -n 38 -m addresses --coin BTC -i test.bin``` </br>
+To turn on the AAA -> AAB filter, use: -s -s Filter</br>
+Run: ```Fialka.exe -b -t 6 -r 14 -n 38 -s Filter -m addresses --coin BTC -i test.bin```
 
 ```
 C:\Users\BOSS>Fialka.exe -b -t 6 -r 14 -n 38 -m addresses --coin BTC -i test.bin
