@@ -153,13 +153,7 @@ Run: ```Fialka.exe -t 6 -r 8 -m address --coin BTC 1KM1Wq1boMka4M4vavQX5Zyc281G8
 
 ## Mode 9
 ### GPU Parallel WIF search
-The mode is under testing, to search for WIFs on the GPU, use the previous version of Fialka!!! </br>
-Create a text file WIF.txt with 65536 WIF on a new line. 
-The GPU is under development! Use the mode in the old version of the [Fialka v1.0](https://github.com/phrutis/Fialka/releases/tag/v1.0)</br>
-Run: ```Fialka.exe -t 0 -g -i 0 -x 256,256 -r 8 -f test.bin```
-
-![Mode 9 example](https://raw.githubusercontent.com/phrutis/Fialka/main/Others/img/r9.jpg "Fialka M-125")
-
+- Use **[WifSolverCuda](https://github.com/phrutis/WifSolverCuda)**
 ## Mode 10
 ### Random search for minikeys 22 S...
 Run: ```Fialka.exe -u -t 6 -r 10 -m addresses --coin BTC -i test.bin```
